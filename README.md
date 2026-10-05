@@ -277,7 +277,7 @@ or when the stream has no PDT. Times outside the playlist extrapolate from its f
 npm install
 npm run dev        # the demo at http://localhost:5175
 npm test           # unit tests (Vitest, happy-dom)
-npm run test:e2e   # Playwright against the demo, streaming Unified Streaming's vod2live channel
+npm run test:e2e   # Playwright against the demo's production build, streaming Unified Streaming's channel
 npm run lint       # oxlint and oxfmt --check
 npm run build      # dist/
 ```

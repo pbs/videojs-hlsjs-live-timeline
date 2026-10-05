@@ -1,4 +1,4 @@
-// Drives the demo pages, which Vite serves from src/. The streams are real test assets, so these need network access.
+// Drives the demo's production build, as deployed. The stream is a real test channel, so these need network access.
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
@@ -7,13 +7,13 @@ export default defineConfig({
   fullyParallel: false,
   reporter: 'list',
   use: {
-    baseURL: 'http://localhost:5175',
+    baseURL: 'http://localhost:5176',
   },
   projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'], viewport: { width: 1280, height: 900 } } }],
   webServer: {
-    command: 'npm run dev',
-    url: 'http://localhost:5175/',
+    command: 'npm run build:demo && npm run preview:demo',
+    url: 'http://localhost:5176/',
     reuseExistingServer: !process.env.CI,
-    timeout: 30_000,
+    timeout: 60_000,
   },
 });

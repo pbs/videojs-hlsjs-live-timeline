@@ -29,6 +29,17 @@ const library = {
 const demo = {
   root: resolve(root, 'demo'),
   base: process.env.VITE_BASE || '/',
+  plugins: [
+    {
+      // The package's `sideEffects` names only dist/index.js, and the demo is inside the package, so a production build
+      // would drop the imports that only define elements: the player, the skin, and src/'s registrations.
+      name: 'demo-side-effects',
+      transform: (code, id) =>
+        id.startsWith(resolve(root, 'demo')) || id.startsWith(resolve(root, 'src'))
+          ? { code, moduleSideEffects: true }
+          : null,
+    },
+  ],
   resolve: {
     alias: { 'videojs-hlsjs-live-timeline': resolve(root, 'src/index.ts') },
   },
@@ -43,6 +54,7 @@ const demo = {
     ],
   },
   server: { port: 5175, strictPort: true },
+  preview: { port: 5176, strictPort: true },
   build: {
     outDir: resolve(root, 'dist-demo'),
     emptyOutDir: true,
