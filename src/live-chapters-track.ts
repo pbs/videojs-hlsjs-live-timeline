@@ -1,9 +1,9 @@
 import type Hls from 'hls.js';
 import type { Fragment } from 'hls.js';
 
-import { adBreaks, type Chapter, type ChapterInput, mergeChapters, toChapters } from './chapters';
-import { fragmentsTimeAt } from './clock-time';
-import { type EngineChange, HlsJsEngineController, type HlsJsMedia } from './engine';
+import { adBreaks, type Chapter, type ChapterInput, mergeChapters, toChapters } from './chapters.js';
+import { fragmentsTimeAt } from './clock-time.js';
+import { type EngineChange, HlsJsEngineController, type HlsJsMedia } from './engine.js';
 
 /** End time of a cue for a chapter still running: past any live edge, so the slider runs it to the edge. */
 const OPEN_END = Number.MAX_VALUE;

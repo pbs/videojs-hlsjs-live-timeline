@@ -1,9 +1,9 @@
-import { HlsJsLiveChaptersElement } from './live-chapters';
-import { HlsJsProgramDateTimeElement } from './program-date-time';
+import { HlsJsLiveChaptersElement } from './live-chapters.js';
+import { HlsJsProgramDateTimeElement } from './program-date-time.js';
 
-export type { ChapterInput, ClockTime } from './chapters';
-export type { HlsJsMedia } from './engine';
-export { mediaTimeAt, programDateTimeAt } from './clock-time';
+export type { ChapterInput, ClockTime } from './chapters.js';
+export type { HlsJsMedia } from './engine.js';
+export { mediaTimeAt, programDateTimeAt } from './clock-time.js';
 export { HlsJsLiveChaptersElement, HlsJsProgramDateTimeElement };
 
 for (const element of [HlsJsProgramDateTimeElement, HlsJsLiveChaptersElement]) {

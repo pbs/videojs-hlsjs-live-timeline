@@ -2,9 +2,9 @@ import type { PropertyValues } from '@videojs/element';
 import { ContextConsumer } from '@videojs/element/context';
 import { mediaContext, UIElement } from '@videojs/html';
 
-import type { ChapterInput } from './chapters';
-import { type HlsJsMedia, isHlsJsMedia } from './engine';
-import { LiveChaptersTrack } from './live-chapters-track';
+import type { ChapterInput } from './chapters.js';
+import { type HlsJsMedia, isHlsJsMedia } from './engine.js';
+import { LiveChaptersTrack } from './live-chapters-track.js';
 
 /**
  * Chapters for a live stream, kept on a `kind="chapters"` text track in step with the playlist, so the time slider's

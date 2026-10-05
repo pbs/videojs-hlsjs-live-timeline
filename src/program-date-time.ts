@@ -2,9 +2,9 @@ import type { PropertyValues } from '@videojs/element';
 import { ContextConsumer } from '@videojs/element/context';
 import { mediaContext, sliderContext, UIElement } from '@videojs/html';
 
-import { programDateTimeAt } from './clock-time';
-import { HlsJsEngineController, type HlsJsMedia, isHlsJsMedia } from './engine';
-import { DEFAULT_FORMAT } from './format';
+import { programDateTimeAt } from './clock-time.js';
+import { HlsJsEngineController, type HlsJsMedia, isHlsJsMedia } from './engine.js';
+import { DEFAULT_FORMAT } from './format.js';
 
 /**
  * A clock time from the stream's `#EXT-X-PROGRAM-DATE-TIME`: at the playback position, or with `type="pointer"` inside

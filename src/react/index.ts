@@ -10,14 +10,14 @@ import {
   useState,
 } from 'react';
 
-import { programDateTimeAt } from '../clock-time';
-import { HlsJsEngineController, type HlsJsMedia, isHlsJsMedia } from '../engine';
-import { DEFAULT_FORMAT } from '../format';
-import { type LiveChaptersOptions, LiveChaptersTrack } from '../live-chapters-track';
+import { programDateTimeAt } from '../clock-time.js';
+import { HlsJsEngineController, type HlsJsMedia, isHlsJsMedia } from '../engine.js';
+import { DEFAULT_FORMAT } from '../format.js';
+import { type LiveChaptersOptions, LiveChaptersTrack } from '../live-chapters-track.js';
 
-export type { ChapterInput, ClockTime } from '../chapters';
-export { mediaTimeAt, programDateTimeAt } from '../clock-time';
-export type { LiveChaptersOptions } from '../live-chapters-track';
+export type { ChapterInput, ClockTime } from '../chapters.js';
+export { mediaTimeAt, programDateTimeAt } from '../clock-time.js';
+export type { LiveChaptersOptions } from '../live-chapters-track.js';
 
 /** The player's media, when hls.js plays it, as with `<HlsJsVideo>`. */
 function useHlsJsMedia(): HlsJsMedia | null {
