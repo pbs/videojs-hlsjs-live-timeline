@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+  font:
+    14px/1.5 system-ui,
+    sans-serif;
+  color: #111;
+  background: #fff;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-bottom: 8px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+nav {
+  display: flex;
+  gap: 16px;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  margin: 0 0 16px;
+  color: #555;
+}
+
+.tagline {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: inherit;
+}
+
+ul {
+  margin: 0 0 16px;
+  padding-left: 20px;
+  color: #555;
+}
+
+li + li {
+  margin-top: 4px;
+}
+
+strong {
+  font-weight: 600;
+  color: #111;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 13px;
+}
+
+footer {
+  margin-top: 24px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Wide enough for "12:00:00 PM", so the slider does not move when the clock fills in or gains an hour digit. */
+hlsjs-program-date-time[type='current'] {
+  min-width: 6.5em;
+}
+
+/* Square corners, where Video.js's skins round them. */
+dvr-player {
+  --media-border-radius: 0;
+}

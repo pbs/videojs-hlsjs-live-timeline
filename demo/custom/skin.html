@@ -1,0 +1,196 @@
+<media-container
+  class="media-skin media-container video-skin"
+  data-theme="default"
+  data-preset="video"
+  style="display: block; width: 100%; aspect-ratio: 16 / 9"
+>
+  <hlsjs-video id="video" playsinline muted autoplay></hlsjs-video>
+  <hlsjs-live-chapters id="chapters" ad-breaks></hlsjs-live-chapters>
+  <media-poster class="media-poster">
+    <img alt="" decoding="async" class="media-poster-image" />
+  </media-poster>
+  <media-buffering-indicator class="media-buffering-indicator">
+    <media-icon name="spinner" class="media-buffering-indicator-spinner-icon"> </media-icon>
+  </media-buffering-indicator>
+  <media-error-dialog class="media-dialog-root">
+    <media-dialog-backdrop class="media-dialog-backdrop"> </media-dialog-backdrop>
+    <media-dialog-popup class="media-dialog-popup">
+      <div class="media-dialog-content">
+        <media-dialog-title class="media-dialog-title"> </media-dialog-title>
+        <media-dialog-description class="media-dialog-description"> </media-dialog-description>
+      </div>
+      <div class="media-dialog-actions">
+        <media-dialog-close class="media-button media-dialog-close"> </media-dialog-close>
+      </div>
+    </media-dialog-popup>
+  </media-error-dialog>
+  <media-title class="media-title"> </media-title>
+  <media-controls>
+    <media-controls-backdrop class="video-controls-backdrop"> </media-controls-backdrop>
+    <media-controls-content class="video-controls video-controls-content">
+      <media-tooltip-group>
+        <media-controls-group class="video-controls-primary">
+          <media-play-button class="media-button media-play-button" id="vjs-6EpYm0RN-0-trigger">
+            <media-icon name="restart" class="media-button-icon media-play-button-restart-icon"> </media-icon>
+            <media-icon name="play" class="media-button-icon media-play-button-play-icon"> </media-icon>
+            <media-icon name="pause" class="media-button-icon media-play-button-pause-icon"> </media-icon>
+          </media-play-button>
+          <media-tooltip
+            trigger="vjs-6EpYm0RN-0-trigger"
+            side="top"
+            class="media-popup media-popup-safe-area media-popup-transition media-popup-surface media-tooltip"
+          >
+            <media-tooltip-label> </media-tooltip-label>
+            <media-tooltip-shortcut class="media-tooltip-shortcut"> </media-tooltip-shortcut>
+          </media-tooltip>
+          <media-mute-button
+            commandfor="vjs-9Jipq7XQ-0-popup"
+            class="media-button media-mute-button video-controls-volume-button"
+            id="vjs-6EpYm0RN-0-2-trigger"
+          >
+            <media-icon name="volume-off" class="media-button-icon media-mute-button-off-icon"> </media-icon>
+            <media-icon name="volume-low" class="media-button-icon media-mute-button-low-icon"> </media-icon>
+            <media-icon name="volume-high" class="media-button-icon media-mute-button-high-icon"> </media-icon>
+          </media-mute-button>
+          <media-tooltip
+            trigger="vjs-6EpYm0RN-0-2-trigger"
+            delay="0"
+            disabled
+            sticky
+            side="top"
+            class="media-popup media-popup-safe-area media-popup-transition media-popup-surface media-tooltip"
+          >
+            <media-tooltip-label> </media-tooltip-label>
+            <media-tooltip-shortcut class="media-tooltip-shortcut"> </media-tooltip-shortcut>
+          </media-tooltip>
+          <media-volume-popover
+            open-on-hover
+            delay="200"
+            close-delay="100"
+            side="top"
+            class="media-popup media-popup-safe-area media-popup-transition media-popup-surface media-volume-popover"
+            id="vjs-9Jipq7XQ-0-popup"
+          >
+            <media-volume-slider class="media-slider media-volume-slider" thumb-alignment="edge" orientation="vertical">
+              <media-slider-track class="media-slider-track">
+                <media-slider-fill class="media-slider-fill"> </media-slider-fill>
+              </media-slider-track>
+              <media-slider-thumb class="media-slider-thumb media-volume-slider-thumb"> </media-slider-thumb>
+            </media-volume-slider>
+          </media-volume-popover>
+          <media-controls-group class="video-time-slider-group">
+            <media-time-slider class="media-slider media-time-slider">
+              <media-time-slider-chapters class="media-time-slider-chapters">
+                <template>
+                  <div class="media-time-slider-chapter">
+                    <media-slider-track class="media-slider-track media-time-slider-chapter-track">
+                      <media-slider-buffer class="media-slider-buffer media-time-slider-chapter-layer">
+                      </media-slider-buffer>
+                      <media-slider-fill class="media-slider-fill media-time-slider-chapter-layer"> </media-slider-fill>
+                    </media-slider-track>
+                  </div>
+                </template>
+              </media-time-slider-chapters>
+              <media-slider-thumb class="media-slider-thumb media-time-slider-thumb"> </media-slider-thumb>
+              <media-slider-preview class="media-slider-preview" overflow="visible">
+                <div class="media-slider-preview-content dvr-preview">
+                  <hlsjs-iframe-slider-thumbnail id="thumbnail" class="media-popup-surface dvr-preview-thumbnail">
+                  </hlsjs-iframe-slider-thumbnail>
+                  <div class="media-popup-surface dvr-preview-label">
+                    <media-time-slider-chapter-title class="media-time-slider-chapter-title">
+                    </media-time-slider-chapter-title>
+                    <hlsjs-program-date-time class="media-time-slider-value" type="pointer"> </hlsjs-program-date-time>
+                  </div>
+                </div>
+              </media-slider-preview>
+            </media-time-slider>
+            <media-live-button class="media-button media-live-button"> </media-live-button>
+            <hlsjs-program-date-time id="clock" class="media-time-value video-time-value" type="current">
+            </hlsjs-program-date-time>
+          </media-controls-group>
+          <media-captions-button
+            class="media-button media-captions-button video-controls-captions-button"
+            id="vjs-6EpYm0RN-0-3-trigger"
+          >
+            <media-icon name="captions-off" class="media-button-icon media-captions-button-off-icon"> </media-icon>
+            <media-icon name="captions-on" class="media-button-icon media-captions-button-on-icon"> </media-icon>
+          </media-captions-button>
+          <media-tooltip
+            trigger="vjs-6EpYm0RN-0-3-trigger"
+            side="top"
+            class="media-popup media-popup-safe-area media-popup-transition media-popup-surface media-tooltip"
+          >
+            <media-tooltip-label> </media-tooltip-label>
+            <media-tooltip-shortcut class="media-tooltip-shortcut"> </media-tooltip-shortcut>
+          </media-tooltip>
+        </media-controls-group>
+        <media-controls-group class="video-controls-secondary">
+          <media-fullscreen-button class="media-button media-fullscreen-button" id="vjs-6EpYm0RN-0-8-trigger">
+            <media-icon name="fullscreen-enter" class="media-button-icon media-fullscreen-button-enter-icon">
+            </media-icon>
+            <media-icon name="fullscreen-exit" class="media-button-icon media-fullscreen-button-exit-icon">
+            </media-icon>
+          </media-fullscreen-button>
+          <media-tooltip
+            trigger="vjs-6EpYm0RN-0-8-trigger"
+            side="top"
+            class="media-popup media-popup-safe-area media-popup-transition media-popup-surface media-tooltip"
+          >
+            <media-tooltip-label> </media-tooltip-label>
+            <media-tooltip-shortcut class="media-tooltip-shortcut"> </media-tooltip-shortcut>
+          </media-tooltip>
+        </media-controls-group>
+      </media-tooltip-group>
+    </media-controls-content>
+  </media-controls>
+  <media-hotkey keys="Space" action="togglePaused"> </media-hotkey>
+  <media-hotkey keys="k" action="togglePaused"> </media-hotkey>
+  <media-hotkey keys="m" action="toggleMuted"> </media-hotkey>
+  <media-hotkey keys="ArrowRight" action="seekStep"> </media-hotkey>
+  <media-hotkey keys="ArrowLeft" action="seekStep"> </media-hotkey>
+  <media-hotkey keys="l" action="seekStep"> </media-hotkey>
+  <media-hotkey keys="j" action="seekStep"> </media-hotkey>
+  <media-hotkey keys="ArrowUp" action="volumeStep"> </media-hotkey>
+  <media-hotkey keys="ArrowDown" action="volumeStep"> </media-hotkey>
+  <media-hotkey keys="0-9" action="seekToPercent"> </media-hotkey>
+  <media-hotkey keys="Home" action="seekToPercent" value="0"> </media-hotkey>
+  <media-hotkey keys="End" action="seekToPercent" value="100"> </media-hotkey>
+  <media-hotkey keys="f" action="toggleFullscreen"> </media-hotkey>
+  <media-hotkey keys="c" action="toggleSubtitles"> </media-hotkey>
+  <media-gesture type="tap" action="togglePaused" pointer="mouse" region="center"> </media-gesture>
+  <media-gesture type="tap" action="toggleControls" pointer="touch"> </media-gesture>
+  <media-gesture type="doubletap" action="seekStep" region="left"> </media-gesture>
+  <media-gesture type="doubletap" action="toggleFullscreen" region="center"> </media-gesture>
+  <media-gesture type="doubletap" action="seekStep" region="right"> </media-gesture>
+  <media-status-announcer class="media-status-announcer"> </media-status-announcer>
+  <div class="video-status-indicators">
+    <media-volume-indicator class="media-indicator media-volume-indicator">
+      <media-volume-indicator-fill class="media-indicator-content media-volume-indicator-fill">
+        <media-icon name="volume-high" class="media-volume-indicator-high-icon"> </media-icon>
+        <media-icon name="volume-low" class="media-volume-indicator-low-icon"> </media-icon>
+        <media-icon name="volume-off" class="media-volume-indicator-off-icon"> </media-icon>
+        <media-volume-indicator-value class="media-volume-indicator-value"> </media-volume-indicator-value>
+      </media-volume-indicator-fill>
+    </media-volume-indicator>
+    <media-status-indicator
+      actions="toggleSubtitles,toggleFullscreen,togglePictureInPicture"
+      class="media-indicator media-status-indicator"
+    >
+      <div class="media-indicator-content media-status-indicator-content">
+        <media-icon name="captions-on" class="media-status-indicator-captions-on-icon"> </media-icon>
+        <media-icon name="captions-off" class="media-status-indicator-captions-off-icon"> </media-icon>
+        <media-icon name="fullscreen-enter" class="media-status-indicator-fullscreen-enter-icon"> </media-icon>
+        <media-icon name="fullscreen-exit" class="media-status-indicator-fullscreen-exit-icon"> </media-icon>
+        <media-status-indicator-value class="media-status-indicator-value"> </media-status-indicator-value>
+      </div>
+    </media-status-indicator>
+    <media-seek-indicator class="media-seek-indicator">
+      <media-icon name="chevron" class="media-seek-indicator-icon"> </media-icon>
+      <media-seek-indicator-value class="media-seek-indicator-value"> </media-seek-indicator-value>
+    </media-seek-indicator>
+    <media-status-indicator actions="togglePaused" class="media-playback-status-indicator">
+      <media-icon name="play" class="media-playback-status-indicator-play-icon"> </media-icon>
+      <media-icon name="pause" class="media-playback-status-indicator-pause-icon"> </media-icon>
+    </media-status-indicator>
+  </div>
+</media-container>
